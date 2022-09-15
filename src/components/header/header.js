@@ -9,6 +9,8 @@ class Header extends Component{
                     <li className="menu-list__item">Coffee house</li>
                     <li className="menu-list__item">Our coffee</li>
                     <li className="menu-list__item">For your pleasure</li>
+                    <li className="menu-list__item">For your pleasure</li>
+                    <li className="menu-list__item">For your pleasure</li>
                 </ul>
             </header>
         );
