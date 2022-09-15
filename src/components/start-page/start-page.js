@@ -1,18 +1,20 @@
 import { Component } from "react";
 import HeaderBlock from "../header-block/header-block";
+import AboutUs from "../about-us-block/about-us";
+
 import './start-page.scss';
 
-class FirstBlock extends Component{
+class StartPage extends Component{
     render(){
         return(
             <section className="start-page">
-                <div>
+                <>
                     <HeaderBlock/>
-                    <span>First block</span>
-                </div>
+                    <AboutUs/>
+                </>
             </section>
         );
     }
 }
 
-export default FirstBlock;
+export default StartPage;
