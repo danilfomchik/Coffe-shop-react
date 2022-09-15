@@ -1,0 +1,15 @@
+header{
+    padding: 0px 30px;
+
+    .menu-list{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    
+        &__item{
+            color: #ffffff;
+            font-size: 12px;
+            padding: 30px 10px;
+        }
+    }
+}
