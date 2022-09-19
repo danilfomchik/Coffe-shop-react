@@ -1,11 +1,15 @@
 import { Component } from "react";
-import './header.scss';
+import './navigation.scss';
 
-class Header extends Component{
+class Navigation extends Component{
+    // constructor(props){
+    //     super(props);
+    // }
+
     render(){
         return(
             <header>
-                <ul className="menu-list">
+                <ul className="menu-list" style={{justifyContent: this.props.justify}}>
                     <li className="menu-list__item">Coffee house</li>
                     <li className="menu-list__item">Our coffee</li>
                     <li className="menu-list__item">For your pleasure</li>
@@ -15,4 +19,4 @@ class Header extends Component{
     }
 }
 
-export default Header;
+export default Navigation;

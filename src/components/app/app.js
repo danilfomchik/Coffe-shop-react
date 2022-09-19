@@ -4,10 +4,14 @@ import StartPage from '../start-page/start-page';
 import './app.scss';
 
 class App extends Component {
+  importAll = (r) => {
+    return r.keys().map(r);
+  }
+
   render(){
     return (
       <div className='app'>
-        <StartPage/>
+        <StartPage importImages={this.importAll}/>
       </div>
     );
   }
