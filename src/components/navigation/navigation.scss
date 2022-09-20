@@ -1,15 +1,11 @@
-header{
-    padding: 0px 150px 20px;
+.menu-list{
+    display: flex;
+    // justify-content: flex-start;
+    align-items: center;
 
-    .menu-list{
-        display: flex;
-        // justify-content: flex-start;
-        align-items: center;
-    
-        &__item{
-            color: #ffffff;
-            font-size: 12px;
-            padding: 30px 10px;
-        }
+    &__item{
+        color: #ffffff;
+        font-size: 12px;
+        padding: 30px 10px;
     }
 }

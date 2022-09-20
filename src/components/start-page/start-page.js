@@ -2,6 +2,7 @@ import { Component } from "react";
 import HeaderBlock from "../header-block/header-block";
 import AboutUs from "../about-us-block/about-us";
 import OurBest from '../our-best/our-best';
+import Footer from "../footer/footer";
 
 import './start-page.scss';
 
@@ -20,6 +21,7 @@ class StartPage extends Component{
                 <HeaderBlock/>
                 <AboutUs/>
                 <OurBest importImages={importImages(require.context('../../images/first-block/our-best/', false, /\.(png|jpe?g|svg)$/))}/>
+                <Footer/>
             </section>
         );
     }

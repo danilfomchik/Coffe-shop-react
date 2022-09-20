@@ -8,7 +8,9 @@ class HeaderBlock extends Component{
     render(){
         return(
             <div className="header-block">
-                <Navigation justify="flex-start"/>
+                <header>
+                    <Navigation justify="flex-start"/>
+                </header>
 
                 <h1 className="main-title">Everything You Love About Coffee</h1>
                 <img src={beansLogo} className="beans-divider" alt="Beans logo" />
