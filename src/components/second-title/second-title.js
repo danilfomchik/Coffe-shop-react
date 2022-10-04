@@ -1,5 +1,5 @@
 import { Component } from "react";
-import beansLogo from "../../images/first-block/beans-logo-black.png";
+import beansLogo from "../../images/beans-logo-black.png";
 
 import './second-title.scss';
 

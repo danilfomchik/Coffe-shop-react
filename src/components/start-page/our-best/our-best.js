@@ -1,6 +1,6 @@
 import { Component } from "react";
-import SecondTitle from "../second-title/second-title";
-import ProductCards from '../product-cards/products-cards';
+import SecondTitle from "../../second-title/second-title";
+import ProductCards from '../../product-cards/products-cards';
 
 import './our-best.scss';
 
@@ -22,7 +22,7 @@ class OurBest extends Component{
 
     render(){
 
-        console.log(this.state.data);
+        // console.log(this.state.data);
 
         return(
             <div className="our-best">

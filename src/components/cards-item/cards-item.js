@@ -3,21 +3,22 @@ import { Component } from "react";
 import './cards-item.scss';
 
 class CardsItem extends Component{
-    constructor(props){
-        super(props);
-    }
+    // constructor(props){
+    //     super(props);
+    // }
 
     render(){
-        const { itemProps } = this.props;
+        const { image, name, country, price, className } = this.props.itemProps;
+        let clazzes = 'cards-item';
 
-        console.log(itemProps);
-
+        // console.log(className);
         
         return(
-            <div className="cards-item">
-                <img className="cards-item__image" src={itemProps.image} alt="Beans" />
-                <p className="cards-item__name">{itemProps.name}</p>
-                <p className="cards-item__price">{itemProps.price + '$'}</p>
+            <div className={className ? clazzes += ' our-coffee__card' : clazzes}>
+                <img className="cards-item__image" src={image} alt="Beans" />
+                <p className="cards-item__name">{name}</p>
+                <p className="cards-item__country">{country ? country : ''}</p>
+                <p className="cards-item__price">{price + '$'}</p>
             </div>
         );
     }

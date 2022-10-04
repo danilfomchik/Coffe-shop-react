@@ -1,0 +1,16 @@
+.search-panel{
+
+    &__searcher{
+        border: none;
+        border-radius: 3px;
+        padding: 5px 10px;
+        text-align: center;
+        font-size: 12px;
+        box-shadow: 3px 3px 9px 0px #00000033;
+    }
+
+    span{
+        font-size: 14px;
+        padding: 0px 20px;
+    }
+}

@@ -1,19 +1,19 @@
 import { Component } from "react";
 import Navigation from "../navigation/navigation";
 
-import beansLogo from "../../images/first-block/beans-logo-black.png";
+import beansLogo from "../../images/beans-logo-black.png";
 
 import './footer.scss';
 
 class Footer extends Component{
     render(){
         return(
-            <div className="footer">
-                <footer>
-                    <Navigation justify="center"/>
-                    <img src={beansLogo} className="beans-divider" alt="Beans logo" />
-                </footer>
-            </div>
+            <footer>
+                <div className="footer">
+                        <Navigation justify="center"/>
+                        <img src={beansLogo} className="beans-divider" alt="Beans logo" />
+                </div>
+            </footer>
         );
     }
 }

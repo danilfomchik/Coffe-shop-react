@@ -6,6 +6,8 @@ const ProductCards = ({cards}) => {
     const elements = cards.map(card => {
         const { id, ...itemProps } = card;
 
+        // console.log('itemProps-->', itemProps);
+
         return (
             <CardsItem key={id} id={id} itemProps={itemProps}/>
         );

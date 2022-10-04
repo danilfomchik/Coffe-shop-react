@@ -1,5 +1,5 @@
 import { Component } from "react";
-import SecondTitle from "../second-title/second-title";
+import SecondTitle from "../../second-title/second-title";
 
 import './about-us.scss';
 

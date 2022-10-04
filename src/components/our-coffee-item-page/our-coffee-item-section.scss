@@ -1,0 +1,39 @@
+.our-coffee-item__section{
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .our-coffee-item__wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    
+        padding: 70px 0px;
+    
+        .our-coffee-item__preview{
+            flex-basis: 35%;
+    
+            img{
+                margin: 0 auto;
+                box-shadow: 2px 2px 20px 0px #0000007d;
+            }
+        }
+    
+        .our-coffee-item__description{
+            text-align: left;
+            font-size: 14px;
+            flex-basis: 50%;
+            padding: 0px 60px 0px 50px;
+
+            p{
+                line-height: 26px;
+                padding: 0px 0px 20px 0px;
+            }
+
+            .our-coffee-item__price-total{
+                font-size: 24px;
+                padding-left: 10px;
+            }
+        }
+    }
+}
