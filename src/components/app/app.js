@@ -1,8 +1,9 @@
 
 import { Component } from 'react';
-import StartPageSection from '../start-page/start-page-section/start-page-section';
+import CoffeHouseSection from '../coffee-house-page/coffe-house-section/coffe-house-section';
 import OurCoffeeSection from '../our-coffee-page/our-coffee-section/our-coffee-section';
 import OurCoffeeItemSection from '../our-coffee-item-page/our-coffee-item-section';
+import PleasureSection from '../pleasure-page/pleasure-page-section/pleasure-section';
 
 import './app.scss';
 
@@ -29,13 +30,14 @@ class App extends Component {
 
     return (
       <div className='app'>
-        <StartPageSection importImages={this.importAll}/>
+        <CoffeHouseSection importImages={this.importAll}/>
 
         {/* <hr/> */}
 
-        <OurCoffeeSection importImages={this.importAll(require.context('../../images/start-page/our-best/', false, /\.(png|jpe?g|svg)$/))}/>
+        <OurCoffeeSection importImages={this.importAll(require.context('../../images/coffee-house/our-best/', false, /\.(png|jpe?g|svg)$/))}/>
 
         <OurCoffeeItemSection data={itemData}/>
+        <PleasureSection importImages={this.importAll(require.context('../../images/pleasure/', false, /\.(png|jpe?g|svg)$/))}/>
       </div>
     );
   }

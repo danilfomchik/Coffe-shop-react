@@ -1,7 +1,7 @@
 import { Component } from "react";
 import Navigation from "../../navigation/navigation";
 
-import beansLogo from "../../../images/start-page/beans-logo-white.png";
+import beansLogo from "../../../images/coffee-house/beans-logo-white.png";
 import './header-block.scss';
 
 class HeaderBlock extends Component{

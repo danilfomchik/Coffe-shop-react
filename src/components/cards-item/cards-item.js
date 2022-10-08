@@ -9,12 +9,14 @@ class CardsItem extends Component{
 
     render(){
         const { image, name, country, price, className } = this.props.itemProps;
-        let clazzes = 'cards-item';
+        let clazzes = 'cards-item ';
 
-        // console.log(className);
+        if(className){
+            clazzes += className;
+        }
         
         return(
-            <div className={className ? clazzes += ' our-coffee__card' : clazzes}>
+            <div className={clazzes}>
                 <img className="cards-item__image" src={image} alt="Beans" />
                 <p className="cards-item__name">{name}</p>
                 <p className="cards-item__country">{country ? country : ''}</p>
