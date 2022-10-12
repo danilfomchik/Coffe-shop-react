@@ -32,11 +32,10 @@ class App extends Component {
       <div className='app'>
         <CoffeHouseSection importImages={this.importAll}/>
 
-        {/* <hr/> */}
-
         <OurCoffeeSection importImages={this.importAll(require.context('../../images/coffee-house/our-best/', false, /\.(png|jpe?g|svg)$/))}/>
 
         <OurCoffeeItemSection data={itemData}/>
+        
         <PleasureSection importImages={this.importAll(require.context('../../images/pleasure/', false, /\.(png|jpe?g|svg)$/))}/>
       </div>
     );

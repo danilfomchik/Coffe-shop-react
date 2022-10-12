@@ -15,8 +15,6 @@ class CoffeHouseSection extends Component{
     render(){
         const { importImages } = this.props;
 
-        // const images = this.importAll(require.context('../../images/first-block/our-best/', false, /\.(png|jpe?g|svg)$/));
-
         return(
             <section className="coffe-house__section">
                 <HeaderBlock/>

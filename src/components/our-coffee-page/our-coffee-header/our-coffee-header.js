@@ -14,7 +14,7 @@ class OurCoffeeHeader extends Component{
         return(
             <div className="our-coffee__header">
                 <header>
-                    <Navigation/>
+                    <Navigation logo="white" justify="flex-start"/>
                 </header>
                 <h1 className="main-title">Our Coffee</h1>
             </div>

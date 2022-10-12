@@ -12,7 +12,7 @@ class PleasureHeader extends Component{
         return(
             <div className="pleasure__header">
                 <header>
-                    <Navigation/>
+                    <Navigation logo="white" justify="flex-start"/>
                 </header>
                 <h1 className="main-title">For your pleasure</h1>
             </div>

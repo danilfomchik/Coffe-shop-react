@@ -17,7 +17,7 @@ class OurCoffeeItemSection extends Component{
     render(){
         const { country, description, price } = this.props.data;
 
-        console.log(country, description, price);
+        // console.log(country, description, price);
 
         return (
             <div className="our-coffee-item__section">

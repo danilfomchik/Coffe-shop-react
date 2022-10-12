@@ -26,7 +26,7 @@ class PleasureSection extends Component{
     }
 
     render(){
-        console.log(this.props.importImages);
+        // console.log(this.props.importImages);
 
         return(
             <section className="pleasure__section">

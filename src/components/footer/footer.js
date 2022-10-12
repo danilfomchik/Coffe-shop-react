@@ -10,7 +10,7 @@ class Footer extends Component{
         return(
             <footer>
                 <div className="footer">
-                        <Navigation justify="center"/>
+                        <Navigation justify="center" logo="black"/>
                         <img src={beansLogo} className="beans-divider" alt="Beans logo" />
                 </div>
             </footer>

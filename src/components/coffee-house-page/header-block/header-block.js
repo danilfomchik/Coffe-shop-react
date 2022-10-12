@@ -9,7 +9,7 @@ class HeaderBlock extends Component{
         return(
             <header>
                 <div className="header-block">
-                    <Navigation justify="flex-start"/>
+                    <Navigation justify="flex-start" logo="white"/>
 
                     <h1 className="main-title" style={{padding: '80px 0px 0px'}}>Everything You Love About Coffee</h1>
                     <img src={beansLogo} className="beans-divider" alt="Beans logo" />

@@ -1,9 +1,10 @@
 import { Component } from "react";
 import OurCoffeeHeader from "../our-coffee-header/our-coffee-header";
 import AboutBeans from "../about-beans/about-beans";
-import SortBeans from "../sort-beans/sort-beans";
 import ProductCards from "../../product-cards/products-cards";
 import Footer from "../../footer/footer";
+import SearchPanel from "../search-panel/search-panel";
+import FilterPanel from "../filter-panel/filter-panel";
 
 import divider from '../../../images/our-coffee/line.png';
 
@@ -25,6 +26,12 @@ class OurCoffeeSection extends Component{
         }
     }
 
+
+    filterBeans = (e) => {
+        console.log(e.target.getAttribute('data-filter'));
+    }
+
+
     render(){
         // console.log(this.props.importImages[2]);
         return(
@@ -34,7 +41,10 @@ class OurCoffeeSection extends Component{
 
                 <img src={divider} alt="Divider" className="main-divider"/>
 
-                <SortBeans/>
+                <div className="sort-beans__wrapper">
+                    <SearchPanel/>
+                    <FilterPanel filterBeans={this.filterBeans}/>
+                </div>
 
                 <ProductCards cards={this.state.data}/>
                 <Footer/>
