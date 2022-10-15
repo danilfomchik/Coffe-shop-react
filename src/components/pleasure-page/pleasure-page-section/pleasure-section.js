@@ -35,7 +35,7 @@ class PleasureSection extends Component{
 
                 <img src={divider} alt="Divider" className="main-divider" style={{padding: '0px 0px 30px'}}/>
 
-                <ProductCards cards={this.state.data}/>
+                <ProductCards getCardInfo={this.props.getCardInfo} cards={this.state.data}/>
                 <Footer/>
             </section>
         );

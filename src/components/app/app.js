@@ -12,7 +12,7 @@ class App extends Component {
     super(props);
 
     this.state={
-      itemData: {
+      cardData: {
         country: 'Brazil',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         price: 16.99
@@ -24,19 +24,23 @@ class App extends Component {
     return r.keys().map(r);
   }
 
+  getCardInfo = (card) => {
+    console.log(card);
+  }
+
   render(){
 
-    const { itemData } = this.state;
+    const { cardData } = this.state;
 
     return (
       <div className='app'>
-        <CoffeHouseSection importImages={this.importAll}/>
+        <CoffeHouseSection getCardInfo={this.getCardInfo} importImages={this.importAll}/>
 
-        <OurCoffeeSection importImages={this.importAll(require.context('../../images/coffee-house/our-best/', false, /\.(png|jpe?g|svg)$/))}/>
+        <OurCoffeeSection getCardInfo={this.getCardInfo} importImages={this.importAll(require.context('../../images/coffee-house/our-best/', false, /\.(png|jpe?g|svg)$/))}/>
 
-        <OurCoffeeItemSection data={itemData}/>
+        <OurCoffeeItemSection data={cardData}/>
         
-        <PleasureSection importImages={this.importAll(require.context('../../images/pleasure/', false, /\.(png|jpe?g|svg)$/))}/>
+        <PleasureSection getCardInfo={this.getCardInfo} importImages={this.importAll(require.context('../../images/pleasure/', false, /\.(png|jpe?g|svg)$/))}/>
       </div>
     );
   }

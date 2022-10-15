@@ -10,11 +10,19 @@
     border-radius: 10px;
     text-align: center;
     font-size: 14px;
-    flex-basis: 240px;
+    flex-basis: 270px;
 
-    margin: 0px 35px;
-    padding: 30px;
+    margin: 15px 35px;
+    padding: 50px 30px;
     cursor: pointer;
+
+    box-shadow: 3px 3px 9px 0px rgb(0 0 0 / 20%);
+    transition: box-shadow 0.3s ease-in-out;
+
+    &:hover{
+        box-shadow: 3px 3px 20px 12px rgb(0 0 0 / 20%);
+        transition: box-shadow 0.3s ease-in-out;
+    }
 
 
     &__image{

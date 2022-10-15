@@ -15,12 +15,14 @@ class CardsItem extends Component{
             clazzes += className;
         }
         
+        // console.log(this.props.getCardInfo);
+
         return(
-            <div className={clazzes}>
+            <div className={clazzes} onClick={(e) => this.props.getCardInfo(e.currentTarget)}>
                 <img className="cards-item__image" src={image} alt="Beans" />
                 <p className="cards-item__name">{name}</p>
                 <p className="cards-item__country">{country ? country : ''}</p>
-                <p className="cards-item__price">{price + '$'}</p>
+                <p className="cards-item__price">{price.toFixed(2) + '$'}</p>
             </div>
         );
     }

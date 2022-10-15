@@ -3,34 +3,42 @@ import { Component } from "react";
 import './filter-panel.scss';
 
 class FilterPanel extends Component{
-    constructor(props){
-        super(props);
-
-        this.state={
-            activeClass: 'all'
-        }
-    }
-
-    changeActiveButton = (e) => {
-        this.setState({
-            activeClass: e.target.getAttribute('data-filter')
-        })
-    }
 
     render(){
-        const { activeClass } = this.state;
+        const { filterParam, getFilterParam } = this.props;
 
         let button = 'filter-panel__button';
         let activeButton = 'filter-panel__button activeButton';
 
         return(
-            <div className="filter-panel" onClick={this.props.filterBeans}>
+            <div className="filter-panel">
                 <span>Or filter</span>
 
-                <button className={activeClass == 'all' ? activeButton : button} data-filter="all" onClick={this.changeActiveButton}>All</button>
-                <button className={activeClass == 'brazil' ? activeButton : button} data-filter="brazil" onClick={this.changeActiveButton}>Brazil</button>
-                <button className={activeClass == 'kenya' ? activeButton : button} data-filter="kenya" onClick={this.changeActiveButton}>Kenya</button>
-                <button className={activeClass == 'columbia' ? activeButton : button} data-filter="columbia" onClick={this.changeActiveButton}>Columbia</button>
+                <div className="filter-panel__controlls" 
+                    onClick={(e) => getFilterParam(e.currentTarget.getAttribute('data-param'), e.target.getAttribute('data-filter'))}
+                    data-param='filterParam'
+                >
+                    <button className={filterParam === 'all' ? activeButton : button} 
+                        data-filter="all"
+                    >
+                        All
+                    </button>
+                    <button className={filterParam === 'brazil' ? activeButton : button} 
+                        data-filter="brazil"
+                    >
+                        Brazil
+                    </button>
+                    <button className={filterParam === 'kenya' ? activeButton : button} 
+                        data-filter="kenya"
+                    >
+                        Kenya
+                    </button>
+                    <button className={filterParam === 'columbia' ? activeButton : button} 
+                        data-filter="columbia"
+                    >
+                        Columbia
+                    </button>
+                </div>
             </div>
         );
     }
