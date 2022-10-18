@@ -28,7 +28,7 @@ class OurBest extends Component{
             <div className="our-best">
                 <SecondTitle titleText="Our Best" isLogo={false}/>
 
-                <ProductCards getCardInfo={this.props.getCardInfo} cards={this.state.data}/>
+                <ProductCards updateCardInfo={this.props.updateCardInfo} cards={this.state.data}/>
                 {/* <img src={images[0]} className="beans-divider" alt="Beans logo" /> */}
             </div>
         );

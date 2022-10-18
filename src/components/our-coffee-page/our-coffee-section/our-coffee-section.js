@@ -70,7 +70,7 @@ class OurCoffeeSection extends Component{
         const { data, filterParam, searchValue } = this.state;
         const visibleData = this.filterBeans(this.searchBeans(data, searchValue), filterParam);
 
-        // console.log(this.props.getCardInfo);
+        // console.log(this.props.updateCardInfo);
 
 
         return(
@@ -85,7 +85,7 @@ class OurCoffeeSection extends Component{
                     <FilterPanel filterParam={filterParam} getFilterParam={this.changeParam}/>
                 </div>
 
-                <ProductCards getCardInfo={this.props.getCardInfo} cards={visibleData}/>
+                <ProductCards updateCardInfo={this.props.updateCardInfo} cards={visibleData}/>
                 <Footer/>
             </section>
         );

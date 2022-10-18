@@ -2,14 +2,14 @@ import CardsItem from '../cards-item/cards-item';
 
 import './product-cards.scss';
 
-const ProductCards = ({cards, getCardInfo}) => {
+const ProductCards = ({cards, updateCardInfo}) => {
     const elements = cards.map(card => {
         const { id, ...itemProps } = card;
 
-        // console.log('-->', getCardInfo);
+        // console.log('-->', updateCardInfo);
 
         return (
-            <CardsItem key={id} id={id} itemProps={itemProps} getCardInfo={getCardInfo}/>
+            <CardsItem key={id} id={id} itemProps={itemProps} updateCardInfo={updateCardInfo}/>
         );
     });
 

@@ -10,13 +10,13 @@ import './coffe-house-section.scss';
 class CoffeHouseSection extends Component{
 
     render(){
-        const { importImages, getCardInfo } = this.props;
+        const { importImages, updateCardInfo } = this.props;
 
         return(
             <section className="coffe-house__section">
                 <HeaderBlock/>
                 <AboutUs/>
-                <OurBest getCardInfo={getCardInfo} importImages={importImages(require.context('../../../images/coffee-house/our-best/', false, /\.(png|jpe?g|svg)$/))}/>
+                <OurBest updateCardInfo={updateCardInfo} importImages={importImages(require.context('../../../images/coffee-house/our-best/', false, /\.(png|jpe?g|svg)$/))}/>
                 <Footer/>
             </section>
         );

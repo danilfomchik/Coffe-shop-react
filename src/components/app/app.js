@@ -15,7 +15,7 @@ class App extends Component {
       cardData: {
         country: 'Brazil',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        price: 16.99
+        price: '16.99$'
       }
     }
   }
@@ -24,8 +24,12 @@ class App extends Component {
     return r.keys().map(r);
   }
 
-  getCardInfo = (card) => {
-    console.log(card);
+  updateCardInfo = (card) => {
+    // console.log(card);
+
+    this.setState({
+      cardData: card
+    })
   }
 
   render(){
@@ -34,13 +38,13 @@ class App extends Component {
 
     return (
       <div className='app'>
-        <CoffeHouseSection getCardInfo={this.getCardInfo} importImages={this.importAll}/>
+        <CoffeHouseSection updateCardInfo={this.updateCardInfo} importImages={this.importAll}/>
 
-        <OurCoffeeSection getCardInfo={this.getCardInfo} importImages={this.importAll(require.context('../../images/coffee-house/our-best/', false, /\.(png|jpe?g|svg)$/))}/>
+        <OurCoffeeSection updateCardInfo={this.updateCardInfo} importImages={this.importAll(require.context('../../images/coffee-house/our-best/', false, /\.(png|jpe?g|svg)$/))}/>
 
         <OurCoffeeItemSection data={cardData}/>
         
-        <PleasureSection getCardInfo={this.getCardInfo} importImages={this.importAll(require.context('../../images/pleasure/', false, /\.(png|jpe?g|svg)$/))}/>
+        <PleasureSection updateCardInfo={this.updateCardInfo} importImages={this.importAll(require.context('../../images/pleasure/', false, /\.(png|jpe?g|svg)$/))}/>
       </div>
     );
   }

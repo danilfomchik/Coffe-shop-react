@@ -32,7 +32,7 @@ class OurCoffeeItemSection extends Component{
                         <SecondTitle titleText="About it" isLogo={true}/>
                         <p className="our-coffee-item__country"><b>Country:</b> {country}</p>
                         <p className="our-coffee-item__description"><b>Description:</b> {description}</p>
-                        <p className="our-coffee-item__price"><b>Price: <span className="our-coffee-item__price-total">{price}$</span></b></p>
+                        <p className="our-coffee-item__price"><b>Price: <span className="our-coffee-item__price-total">{price}</span></b></p>
                     </div>
                 </div>
 
